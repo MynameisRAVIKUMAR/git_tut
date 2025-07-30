@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design Colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    
+    <!-- Basic Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Gray Shades -->
+    <color name="light_gray">#FFF5F5F5</color>
+    <color name="medium_gray">#FFE0E0E0</color>
+    <color name="dark_gray">#FF424242</color>
+    
+    <!-- Dark Theme Colors -->
+    <color name="dark_background">#FF121212</color>
+    <color name="dark_surface">#FF1E1E1E</color>
+    <color name="dark_surface_variant">#FF2C2C2C</color>
+    
+    <!-- Music Player Specific Colors -->
+    <color name="music_primary">#FF1DB954</color>
+    <color name="music_primary_dark">#FF1ED760</color>
+    <color name="music_accent">#FFFF5722</color>
+    
+    <!-- Status Colors -->
+    <color name="success">#FF4CAF50</color>
+    <color name="warning">#FFFF9800</color>
+    <color name="error">#FFF44336</color>
+    
+    <!-- Semi-transparent Colors -->
+    <color name="black_overlay">#66000000</color>
+    <color name="white_overlay">#66FFFFFF</color>
+    
+    <!-- Gradient Colors -->
+    <color name="gradient_start">#FF6200EE</color>
+    <color name="gradient_end">#FF03DAC5</color>
+</resources>

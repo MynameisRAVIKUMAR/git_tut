@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_songs">
+
+    <fragment
+        android:id="@+id/navigation_songs"
+        android:name="com.musicplayer.app.ui.fragments.SongsFragment"
+        android:label="@string/nav_songs"
+        tools:layout="@layout/fragment_songs" />
+
+    <fragment
+        android:id="@+id/navigation_albums"
+        android:name="com.musicplayer.app.ui.fragments.AlbumsFragment"
+        android:label="@string/nav_albums"
+        tools:layout="@layout/fragment_albums" />
+
+    <fragment
+        android:id="@+id/navigation_artists"
+        android:name="com.musicplayer.app.ui.fragments.ArtistsFragment"
+        android:label="@string/nav_artists"
+        tools:layout="@layout/fragment_artists" />
+
+    <fragment
+        android:id="@+id/navigation_playlists"
+        android:name="com.musicplayer.app.ui.fragments.PlaylistsFragment"
+        android:label="@string/nav_playlists"
+        tools:layout="@layout/fragment_playlists" />
+
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.musicplayer.app.ui.fragments.PlayerFragment"
+        android:label="Player"
+        tools:layout="@layout/fragment_player" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.musicplayer.app.ui.fragments.SearchFragment"
+        android:label="@string/nav_search"
+        tools:layout="@layout/fragment_search" />
+
+    <action
+        android:id="@+id/action_to_player"
+        app:destination="@id/playerFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/slide_down" />
+
+    <action
+        android:id="@+id/action_to_search"
+        app:destination="@id/searchFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/fade_out" />
+
+</navigation>
