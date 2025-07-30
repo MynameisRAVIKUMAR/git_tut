@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SongCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="?attr/colorSurface"
+    app:rippleColor="?attr/colorPrimary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Album Art -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/albumArt"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedImageView"
+            tools:src="@drawable/ic_music_note_24" />
+
+        <!-- Song Title -->
+        <TextView
+            android:id="@+id/titleText"
+            style="@style/SongTitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@id/artistText"
+            app:layout_constraintEnd_toStartOf="@id/favoriteIndicator"
+            app:layout_constraintStart_toEndOf="@id/albumArt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Song Title" />
+
+        <!-- Artist Name -->
+        <TextView
+            android:id="@+id/artistText"
+            style="@style/SongArtistText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/favoriteIndicator"
+            app:layout_constraintStart_toEndOf="@id/albumArt"
+            app:layout_constraintTop_toBottomOf="@id/titleText"
+            tools:text="Artist Name" />
+
+        <!-- Favorite Indicator -->
+        <ImageView
+            android:id="@+id/favoriteIndicator"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_favorite_24"
+            android:tint="@color/music_accent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/titleText"
+            app:layout_constraintEnd_toStartOf="@id/durationText"
+            app:layout_constraintTop_toTopOf="@id/titleText"
+            tools:visibility="visible" />
+
+        <!-- Duration -->
+        <TextView
+            android:id="@+id/durationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/titleText"
+            app:layout_constraintEnd_toStartOf="@id/menuButton"
+            app:layout_constraintTop_toTopOf="@id/titleText"
+            tools:text="3:45" />
+
+        <!-- Menu Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menuButton"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:icon="@drawable/ic_more_vert_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="16dp"
+            app:iconTint="?attr/colorOnSurfaceVariant"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
